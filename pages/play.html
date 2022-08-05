@@ -1,0 +1,48 @@
+<div class="screen1">
+    <h1 class="title">Jokenpô</h1>
+    <p>Escolha uma das opções:</p>
+    <form>
+        <div class="buttons">
+            <div class="rockButton">
+                <input type="radio" name="options" id="rock" value="rock">
+                <label for="rock">
+                    <img src="images/rock.png" alt="Image of a rock" class="rockIcon"><br>
+                    Pedra
+                </label>
+            </div>
+            <div class="paperButton">
+                <input type="radio" name="options" id="paper" value="paper">
+                <label for="paper">
+                    <img src="images/paper.png" alt="Image of a paper" class="paperIcon"><br>
+                    Papel
+                </label>
+            </div>
+            <div class="scissorButton">
+                <input type="radio" name="options" id="scissor" value="scissor">
+                <label for="scissor">
+                    <img src="images/scissor.png" alt="Image of a scissor" class="scissorIcon"><br>
+                    Tesoura
+                </label>
+            </div>
+        </div>
+        <button class="playButton" onclick="handleClick(event)">Jogar</button>
+    </form>
+</div>
+<div class="screen2 hide">
+    <h1 class="title"id="winLose"></h1>
+    <div class="choices">
+        <div class="yourChoice">
+            <h2>Sua escolha:</h2>
+            <img src="images/rock.png" alt="Image of a rock" class="rockIcon" id="userIcon">
+        </div>
+        <div class="pcChoice">
+            <h2>Escolha do computador:</h2>
+            <img src="images/scissor.png" alt="Image of a scissor" class="scissorIcon" id="pcIcon"><br>
+        </div>
+    </div>
+    <button class="playButton" onclick="tryAgain(event)">Tentar novamente</button>
+</div>
+<div class="loadScreen hide">
+    <h1>Jo</h1>
+    <h1>Ken</h1>
+    <h1>Pô</h1>

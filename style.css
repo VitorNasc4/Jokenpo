@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+
+    height: 100%;
+
+    background: linear-gradient(287.56deg, #C2E9FB 0%, #A1C4FD 100%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    margin: 5rem auto 9rem;
+}
+
+header nav ul {
+    list-style-type: none;
+    
+    width: min(42.3rem, 90vw);
+
+    display: flex;
+    justify-content: space-around;
+}
+header nav ul li a {
+    text-decoration: none;
+    font-family: 'DM Sans', sans-serif;
+    color: #34355B;
+    font-size: 2rem;
+}
+
+header nav ul li a:hover {
+    color: #1d1e33;
+    font-weight: bold;
+}
+
+.selected {
+    color: #1d1e33;
+    font-weight: bold;
+}
+
+/* SCREEN1 */
+
+.rockButton label, .paperButton label, .scissorButton label {
+    font-family: 'DM Sans', sans-serif;
+    color: #34355B
+}
+
+main {
+    width: min(42.3rem, 90vw);
+    
+    background-color: white;
+    padding: 4.8rem 5.5rem 5.5rem;
+
+    text-align: center;
+
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: .6rem;
+}
+.title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+
+    color: #34355B;
+
+    margin-bottom: 1.6rem;
+}
+
+main p {
+    font-family: 'DM Sans';
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+
+    color: rgba(52, 53, 91, 0.8);
+
+    margin-bottom: 1.5rem;
+}
+
+.buttons {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    gap: 4rem;
+
+    margin-bottom: 2.5rem;
+}
+
+.rockButton, .paperButton, .scissorButton {
+    display: flex;
+    flex-direction: column;
+}
+
+.rockButton input, .paperButton input, .scissorButton input{
+    display: none;
+}
+
+.rockIcon, .scissorIcon{
+    width: 5rem;
+    height: 5rem;
+}
+.paperIcon {
+    width: 4.5rem;
+    height: 4.5rem;
+}
+
+.rockButton input:checked + label, .paperButton input:checked + label, .scissorButton input:checked + label  {
+    font-weight: bold;
+}
+
+.rockButton input:checked + label img {
+    animation: spinRock 2.5s infinite forwards 
+}
+@keyframes spinRock {
+    0% {
+      transform: scale(1.2);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+  }
+
+  .paperButton input:checked + label img, .scissorButton input:checked + label img {
+    animation: spin 2.5s infinite forwards 
+  }
+  @keyframes spin {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.25);
+    }
+    100% {
+        transform: scale(1);
+    }
+  }
+
+.playButton {
+    padding: 1.6rem;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2.1rem;
+    color: white;
+
+    background: #7879F1;
+    border-radius: .4rem;
+    border: none;
+
+    margin-top: 2rem;
+    transition: all 700ms;
+}
+
+.playButton:hover {
+    transform: scale(1.12);
+    background-color: #4545b3;
+}
+
+.playButton, .rockButton label, .paperButton label, .scissorButton label {
+    cursor: pointer;
+}
+.hide {
+    display: none;
+}
+
+/* SCREEN2 */
+
+h2 {
+    font-family: 'DM Sans';
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+
+    color: rgba(52, 53, 91, 0.8);
+
+    margin-bottom: 1.5rem;
+}
+
+.loadScreen {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.8rem;
+    line-height: 5rem;
+    font-weight: bold;
+
+    color: #34355B;
+}
+
+.loadScreen h1 {
+    opacity: 0;
+}
+
+@keyframes opacity {
+    0% {
+      opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.loadScreen h1:nth-child(1) {
+animation: opacity 1.5s 700ms forwards
+}
+.loadScreen h1:nth-child(2) {
+animation: opacity 1.5s 1400ms forwards
+}
+.loadScreen h1:nth-child(3) {
+animation: opacity 1.5s 2100ms forwards
+}
+
+.instructions, .history {
+    text-align: justify;
+    font-family: 'DM Sans';
+    font-weight: 400;
+
+    color: rgba(52, 53, 91, 0.8);
+}
