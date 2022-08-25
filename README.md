@@ -16,7 +16,7 @@ Um website que permite jogar o jogo jokenpo
 ## Demonstração
 
 <p align="center"> 
-<img src="./images./demo.gif">
+![demo](https://user-images.githubusercontent.com/101666833/186693696-2e5ae915-3500-417e-a014-7b0be3c92795.gif)
 </p>
 
 
